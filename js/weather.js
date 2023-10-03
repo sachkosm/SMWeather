@@ -53,7 +53,7 @@ function handleWeatherData(data, locationQuery, cardNumber, unitLetter, unit) {
                 <img src="${iconURL}" alt="${weatherDescription}" title="${weatherDescription}">
                 <div>
                     <h3>${cityName}, ${countryCode}</h3>
-                    <h3>Zip Code: ${locationQuery}</h3>
+                    <p class="zipCode">Zip Code: ${locationQuery}</p>
                     <h3 class="temperature">${temperature}°${unitLetter}</h3>
                     <h3>${weatherDescription}</h3>
                     <button class="detailsToggleBtn">Details</button>

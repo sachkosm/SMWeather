@@ -213,10 +213,16 @@ p {
     color: #333;
 }
 
-
 .weatherInfo p {
     margin-bottom: 10px;
     font-size: 18px;
+    color: #551414;
+    text-shadow: 2px 2px 2px #888888;
+}
+
+.weatherInfo p.zipCode {
+    margin-bottom: 10px;
+    font-size: 11px;
     color: #551414;
     text-shadow: 2px 2px 2px #888888;
 }
@@ -231,7 +237,7 @@ p {
 .weatherInfo h3.temperature {
     font-weight: bold;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 26px;
     color: #6e0b0b;
 }
 
