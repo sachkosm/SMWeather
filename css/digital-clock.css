@@ -1,0 +1,25 @@
+.clock-container {
+    position: relative;
+
+  
+}
+
+.digital-clock {
+    position: absolute;
+    bottom: 20%; /* Adjust to position the digital clock within the round clock */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    color: #680909b4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    /* Transparent background settings */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}

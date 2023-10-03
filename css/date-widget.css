@@ -1,0 +1,14 @@
+#dateWidget {
+    width: 400px;
+    height: 50px;  /* Adjust based on your preferences */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #4CAF50;  /* Change to your preferred color */
+    font-family: 'Digital-7', sans-serif;  /* You may need to import a digital font or use another font */
+    font-size: 2rem;
+    border: 3px solid darkred;
+    margin-bottom: 20px;  /* Spacing between the date widget and the round clock */
+    border-radius: 25px;  /* Adjust this value to your preference */
+}

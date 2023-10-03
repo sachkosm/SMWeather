@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock with Background Picture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Digital Clock CSS -->
+    <link rel="stylesheet" href="css/digital-clock.css">
+    <link rel="stylesheet" href="css/date-widget.css">
+</head>
+
+<body>
+    <div class="clock-container">
+        <div id="dateWidget">
+            <span id="dateDisplay"></span>
+        </div>
+
+        <canvas id="clockCanvas" width="400" height="400"></canvas>
+        <!-- Digital Clock HTML -->
+        <div class="digital-clock">
+            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
+    </div>
+    <div class="weather-cards-wrapper">
+        <div class="weather-card" id="weather-card-1">
+            <div class="toggle-icon">☰</div>
+            <div class="input-fields collapsed">
+                <input type="text" class="zipInput" placeholder="Enter ZIP Code" value="11104">
+                <input type="text" class="countryCode" placeholder="Enter country Code" value="us">
+                <button class="getWeatherBtn">Get Weather</button>
+            </div>
+            <div class="weatherInfo"></div>
+            <div class="lastUpdated">Last updated: Never</div>
+        </div>
+
+        <div class="weather-card" id="weather-card-2">
+            <div class="toggle-icon">☰</div>
+            <div class="input-fields collapsed">
+                <input type="text" class="zipInput" placeholder="Enter ZIP Code" value="07422">
+                <input type="text" class="countryCode" placeholder="Enter country Code" value="us">
+                <button class="getWeatherBtn">Get Weather</button>
+            </div>
+            <div class="weatherInfo"></div>
+            <div class="lastUpdated">Last updated: Never</div>
+        </div>
+
+        <div class="weather-card" id="weather-card-3">
+            <div class="toggle-icon">☰</div>
+            <div class="input-fields collapsed">
+                <input type="text" class="zipInput" placeholder="Enter ZIP Code" value="80026">
+                <input type="text" class="countryCode" placeholder="Enter country Code" value="us">
+                <button class="getWeatherBtn">Get Weather</button>
+            </div>
+            <div class="weatherInfo"></div>
+            <div class="lastUpdated">Last updated: Never</div>
+        </div>
+        <div class="weather-card" id="weather-card-4">
+            <div class="toggle-icon">☰</div>
+            <div class="input-fields collapsed">
+                <input type="text" class="zipInput" placeholder="Enter ZIP Code" value="8600">
+                <input type="text" class="countryCode" placeholder="Enter country Code" value="bg">
+                <button class="getWeatherBtn">Get Weather</button>
+            </div>
+            <div class="weatherInfo"></div>
+            <div class="lastUpdated">Last updated: Never</div>
+        </div>
+    </div>
+</body>
+
+
+<script src="config/config.js"></script>
+
+<!-- UTILS SCRIPT -->
+<script src="js/utils.js"></script>
+
+<!-- DATE SCRIPT -->
+<script src="js/date.js"></script>
+
+<!-- CLOCK SCRIPT -->
+<script src="js/clock.js"></script>
+
+<!-- DIGITAL SCRIPT -->
+<script src="js/digital-clock.js"></script>
+
+<!-- WEATHER SCRIPT -->
+<script src="js/weather.js"></script>
+
+
+
+</html>

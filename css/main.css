@@ -1,0 +1,336 @@
+html, body {
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    height: 98vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;  /* Base font-size for easy scaling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+
+    /* Background Image */
+    /* background-image: url('images/Alamy-Portugal.jpg');
+            /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#clockCanvas {
+    border: 4px solid darkred;
+    border-radius: 50%; /* This makes it round */
+    max-width: 90%; /* Adjust the clock's width for mobile */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+.weather-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px 40px;
+    margin-top: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid darkred; 
+    margin: 10px; /* Space between cards */
+    max-width: 90%; /* Allow some margin on both sides for mobile */
+}
+
+.weather-card input,
+.weather-card button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.weather-card button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.weather-card button:hover {
+    background-color: #555;
+}
+
+h2,
+h3,
+p {
+    margin: 10px 0;
+    color: blue;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #888888;
+}
+
+/* ... Other CSS ... */
+
+.weather-card.clear {
+    background-color: rgba(135, 206, 235, 0.8);
+    /* Sky blue for clear sky */
+}
+
+.weather-card.rain {
+    background-color: rgba(70, 130, 180, 0.8);
+    /* Steel blue for rain */
+}
+
+.weather-card.clouds {
+    background-color: rgba(211, 211, 211, 0.8);
+    /* Light gray for clouds */
+}
+
+.weather-card.snow {
+    background-color: rgba(255, 250, 250, 0.8);
+    /* Snow white for snow */
+}
+
+.weather-card.thunderstorm {
+    background-color: rgba(47, 79, 79, 0.8);
+    /* Dark slate gray for thunderstorm */
+}
+
+.weather-card.mist {
+    background-color: rgba(192, 192, 192, 0.8);
+    /* Silver for mist/fog */
+}
+
+.weather-card.unknown {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Default white for unknown conditions */
+}
+
+#lastUpdated {
+    font-size: 0.8em;
+    margin-top: 20px;
+    color: #555;
+}
+
+#weatherInputs {
+    transition: all 0.3s ease-in-out;
+}
+
+.input-fields {
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    max-height: 300px;
+    /* Adjust as per your actual content height */
+    overflow: hidden;
+    opacity: 1;
+}
+
+.input-fields.collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+    /* To completely collapse the section without spacing */
+}
+
+.weather-cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* This will give space between each card */
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+    justify-content: center; /* Center cards on the page */
+}
+
+.weatherDetails.collapsed {
+    display: none;
+}
+
+.forecastDetails.collapsed {
+    display: none;
+}
+
+
+.forecastContainer {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    white-space: nowrap;
+    padding: 5px 10px;
+}
+
+.forecastItem {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+}
+
+.forecastItem img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.forecastItem p {
+    margin: 0;
+    font-size: 8px; /* reduced font size */
+    color: #555;
+}
+
+.forecastItem p.minTemp {
+    margin: 0;
+    color: #5738e2;
+}
+
+.forecastItem p.maxTemp {
+    margin: 0;
+    color: #af1212;
+}
+
+/* Main weather card styling */
+.weather-card {
+    background-color: rgba(255, 255, 255, 0.9);  /* semi-transparent white */
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 480px;
+    /* min-width: 350px; */
+    margin: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.weatherInfo h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+
+.weatherInfo p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #551414;
+    text-shadow: 2px 2px 2px #888888;
+}
+
+/* Icon for weather description */
+.weatherInfo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.weatherInfo h3.temperature {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #6e0b0b;
+}
+
+
+/* Button styling */
+.getWeatherBtn {
+    background-color: #007BFF; /* You can adjust the color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.getWeatherBtn:hover {
+    background-color: #0056b3; /* A bit darker shade on hover */
+}
+
+/* Last updated styling */
+.lastUpdated {
+    font-size: 12px;
+    color: #554d4d;
+    margin-top: 10px;
+}
+
+.scrollable-container {
+    overflow-y: auto; /* enables vertical scrolling */
+    max-height: 80vh; /* adjusts the height to be a percentage of the viewport height */
+}
+
+.hide-on-iphone {
+    display: none;
+}
+
+
+/* Media Query for Larger Screens (e.g., iPad) */
+@media screen and (min-width: 768px) {
+    .weather-card {
+        max-width: 40%; /* Three cards in a row for larger screens */
+    }
+    
+    #clockCanvas {
+        max-width: 400px; /* Or any other appropriate value */
+    }
+}
+
+/* For iPads */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px)  {
+    .weather-cards-wrapper {
+        overflow-y: auto;
+        max-height: 80vh;
+    }
+}
+
+/* For iPhones */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 428px) {
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* This makes sure padding and borders don't increase the total size of an element */
+}
+
+    /* Hide everything by default */
+    body > *:not(.weather-cards-wrapper) {
+        display: none;
+    }
+
+    /* Override to display the weather cards */
+    .weather-cards-wrapper,
+    .weather-cards-wrapper .weather-card {
+        display: block;
+    }
+
+    /* Make it scrollable */
+    .weather-cards-wrapper {
+        overflow-y: auto;
+        max-height: 80vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .weather-cards {
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+
+/* Media Query for Smallest Screens (e.g., iPhone 5) */
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 14px; /* Reduce base font-size for very small devices */
+    }
+}
+
+
