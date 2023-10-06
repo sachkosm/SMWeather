@@ -321,7 +321,7 @@ p {
     /* Make it scrollable */
     .weather-cards-wrapper {
         overflow-y: auto;
-        max-height: 80vh;
+        max-height: 90vh;
         margin: 0;
         padding: 0;
     }
