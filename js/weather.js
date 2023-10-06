@@ -238,7 +238,7 @@ setInterval(() => {
     weatherCards.forEach((card, index) => {
         fetchWeatherFromInputs(index + 1);
     });
-}, 15 * 1 * 1000);
+}, 15 * 60 * 1000);
 
 document.querySelectorAll('.getWeatherBtn').forEach((btn, index) => {
     btn.addEventListener('click', function () {
