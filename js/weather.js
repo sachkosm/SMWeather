@@ -3,7 +3,7 @@ const API_KEY = config.API_KEY;
 // WEATHER SCRIPT
 var mainWeather = null
 
-function fetchWeatherForLocation(zipCode = "11104", cardNumber, countryCode = "us" ) {
+function fetchWeatherForLocation(zipCode = "11104", cardNumber, countryCode = "us") {
     let unit = 'imperial';
     let unitLetter = 'F';
     if (countryCode !== 'us') { unit = 'metric'; unitLetter = 'C' }
@@ -107,15 +107,19 @@ function handleWeatherData(data, locationQuery, cardNumber, unitLetter, unit) {
 
         weatherCard.className = 'weather-card'; // Reset to default first
 
-        const firstLocation = document.querySelector(`#weather-card-1 h3`)  && document.querySelector(`#weather-card-1 h3`).innerHTML ? document.querySelector(`#weather-card-1 h3`).innerHTML.split(',')[0] : null
+        const firstLocation = document.querySelector(`#weather-card-1 h3`) && document.querySelector(`#weather-card-1 h3`).innerHTML ? document.querySelector(`#weather-card-1 h3`).innerHTML.split(',')[0] : null
 
-        if (firstLocation !== null && mainWeather === null) {
+        // Set background image based on weather for the first card
+        if (firstLocation && data.name === firstLocation) {
             mainWeather = data.name === firstLocation && data.weather[0].main ? data.weather[0].main.toLowerCase() : 'unknown';
             document.body.style.backgroundImage = `url('images/${mainWeather}.jpg')`;
+            
             if (mainWeather) {
+                // Add class to change color of first card based on weather 
                 weatherCard.classList.add(mainWeather);
             }
         }
+
     } else {
         document.getElementById('weatherInfo').textContent =
             'Unable to fetch weather data for the given location.';
@@ -234,7 +238,7 @@ setInterval(() => {
     weatherCards.forEach((card, index) => {
         fetchWeatherFromInputs(index + 1);
     });
-}, 15 * 60 * 1000);
+}, 15 * 1 * 1000);
 
 document.querySelectorAll('.getWeatherBtn').forEach((btn, index) => {
     btn.addEventListener('click', function () {
