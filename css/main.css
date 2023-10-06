@@ -138,7 +138,7 @@ p {
 .weather-cards-wrapper {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     /* This will give space between each card */
     display: flex;
     flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
@@ -268,7 +268,7 @@ p {
 
 .scrollable-container {
     overflow-y: auto; /* enables vertical scrolling */
-    max-height: 95vh; /* adjusts the height to be a percentage of the viewport height */
+    max-height: 90vh; /* adjusts the height to be a percentage of the viewport height */
 }
 
 .hide-on-iphone {
