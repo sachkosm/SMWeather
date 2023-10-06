@@ -293,7 +293,7 @@ p {
   and (max-device-width: 1024px)  {
     .weather-cards-wrapper {
         overflow-y: auto;
-        max-height: 80vh;
+        max-height: 90vh;
     }
 }
 
