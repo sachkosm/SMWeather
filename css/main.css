@@ -268,7 +268,7 @@ p {
 
 .scrollable-container {
     overflow-y: auto; /* enables vertical scrolling */
-    max-height: 80vh; /* adjusts the height to be a percentage of the viewport height */
+    max-height: 95vh; /* adjusts the height to be a percentage of the viewport height */
 }
 
 .hide-on-iphone {
