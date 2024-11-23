@@ -1,0 +1,21 @@
+name: Manual Build and Deploy
+
+on:
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build the Project
+        run: npm run build
+
+      - name: Deploy (Simple)
+        run: echo "Deployment logic goes here (e.g., FTP, S3 upload, etc.)"
