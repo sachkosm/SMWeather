@@ -6,3 +6,5 @@ function updateDate() {
 
 // Initial call to set the date
 updateDate();
+
+setInterval(updateDate, 60 * 1000);
