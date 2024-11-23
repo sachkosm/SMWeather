@@ -138,7 +138,7 @@ p {
 .weather-cards-wrapper {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 5px;
     /* This will give space between each card */
     display: flex;
     flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
