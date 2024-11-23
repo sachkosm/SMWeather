@@ -14,5 +14,8 @@ jobs:
       - name: Build the Project
         run: npm run build
 
-      - name: Deploy (Simple)
-        run: echo "Deployment logic goes here (e.g., FTP, S3 upload, etc.)"
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # Directory containing the static files to deploy
