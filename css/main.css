@@ -66,7 +66,7 @@ html, body {
 h2,
 h3,
 p {
-    margin: 10px 0;
+    margin: 1px 0;
     color: blue;
     font-size: 18px;
     font-weight: bold;
@@ -208,7 +208,7 @@ p {
 
 .weatherInfo h3 {
     font-weight: 500;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     font-size: 24px;
     color: #333;
 }
