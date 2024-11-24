@@ -280,6 +280,7 @@ p {
 @media screen and (min-width: 768px) {
     .weather-card {
         max-width: 40%; /* Three cards in a row for larger screens */
+        max-height: 385px; /* Adjust the height as needed */
     }
     
     #clockCanvas {
